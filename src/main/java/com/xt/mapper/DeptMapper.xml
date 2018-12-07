@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xt.mapper.DeptMapper">
+    <!-- 配置resultMap -->
+    <resultMap id="deptResultMap" type="Dept">
+        <id column="deptno" property="deptNo"></id>
+        <result column="dname" property="dName"></result>
+        <result column="loc" property="loc"></result>
+    </resultMap>
+
+    <!--查询所有dept数据-->
+    <select id="getAll" resultMap="deptResultMap">
+        select * from dept
+    </select>
+</mapper>
